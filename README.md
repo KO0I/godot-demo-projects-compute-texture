@@ -1,6 +1,6 @@
 # Compute texture
 
-Original [repo and demo](https://github.com/KO0I/godot-demo-projects-compute-texture/blob/main/README.md)
+Original [repo and demo]([https://github.com/KO0I/godot-demo-projects-compute-texture/blob/main/README.md](https://github.com/godotengine/godot-demo-projects/tree/master/compute/texture))
 
 This demo shows how to use compute shaders to populate a texture that is used as an input for a material shader.
 
