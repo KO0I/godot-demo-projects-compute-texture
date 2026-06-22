@@ -9,7 +9,7 @@ Language: GDScript
 
 Renderer: Forward+
 
-> Note: this demo requires Godot 4.2 or later
+> Note: this demo requires Godot 4.7 or later
 
 ## Screenshots
 
