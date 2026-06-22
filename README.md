@@ -1,5 +1,7 @@
 # Compute texture
 
+Original [repo and demo](https://github.com/KO0I/godot-demo-projects-compute-texture/blob/main/README.md)
+
 This demo shows how to use compute shaders to populate a texture that is used as an input for a material shader.
 
 When the mouse cursor isn't hovering above the plane random "drops" of water are added that drive the ripple effect.
