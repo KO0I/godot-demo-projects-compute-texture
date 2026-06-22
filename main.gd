@@ -8,8 +8,16 @@ var y = 0.0
 @onready var water_plane = $WaterPlane
 
 func _ready():
+	var reflection_menu := $Container/ReflectionPreset/OptionButton
+	reflection_menu.clear()
+	for preset_name in $WaterPlane.get_reflection_preset_names():
+		reflection_menu.add_item(preset_name)
+	reflection_menu.select($WaterPlane.reflection_preset)
+
 	$Container/RainSize/HSlider.value = $WaterPlane.rain_size
 	$Container/MouseSize/HSlider.value = $WaterPlane.mouse_size
+	$Container/SphereShine/HSlider.value = $WaterPlane.sphere_shine
+	_update_sphere_shine_label($WaterPlane.sphere_shine)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,3 +33,16 @@ func _on_rain_size_changed(value):
 
 func _on_mouse_size_changed(value):
 	$WaterPlane.mouse_size = value
+
+
+func _on_sphere_shine_changed(value):
+	$WaterPlane.sphere_shine = value
+	_update_sphere_shine_label(value)
+
+
+func _update_sphere_shine_label(value):
+	$Container/SphereShine/Value.text = "%0.2f" % value
+
+
+func _on_reflection_preset_selected(index):
+	$WaterPlane.apply_reflection_preset(index)

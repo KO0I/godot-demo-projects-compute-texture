@@ -41,6 +41,18 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Rotate"
 
+[node name="ReflectionPreset" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="Container/ReflectionPreset"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Container/ReflectionPreset"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Reflection"
+
 [node name="RainSize" type="HBoxContainer" parent="Container" unique_id=1410757361]
 layout_mode = 2
 
@@ -73,5 +85,29 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Mouse size"
 
+[node name="SphereShine" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Container/SphereShine"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="Container/SphereShine"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sphere shine"
+
+[node name="Value" type="Label" parent="Container/SphereShine"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1.00"
+horizontal_alignment = 2
+
 [connection signal="value_changed" from="Container/RainSize/HSlider" to="." method="_on_rain_size_changed"]
 [connection signal="value_changed" from="Container/MouseSize/HSlider" to="." method="_on_mouse_size_changed"]
+[connection signal="value_changed" from="Container/SphereShine/HSlider" to="." method="_on_sphere_shine_changed"]
+[connection signal="item_selected" from="Container/ReflectionPreset/OptionButton" to="." method="_on_reflection_preset_selected"]
