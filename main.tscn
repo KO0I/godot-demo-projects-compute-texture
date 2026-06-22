@@ -60,7 +60,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 min_value = 1.0
-max_value = 10.0
+max_value = 20.0
 step = 0.1
 value = 1.0
 
@@ -69,6 +69,13 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Rain size"
 
+[node name="Value" type="Label" parent="Container/RainSize"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1.0"
+horizontal_alignment = 2
+
 [node name="MouseSize" type="HBoxContainer" parent="Container" unique_id=1613441797]
 layout_mode = 2
 
@@ -76,7 +83,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 min_value = 1.0
-max_value = 10.0
+max_value = 20.0
 step = 0.1
 value = 1.1
 
@@ -84,6 +91,13 @@ value = 1.1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Mouse size"
+
+[node name="Value" type="Label" parent="Container/MouseSize"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1.1"
+horizontal_alignment = 2
 
 [node name="SphereShine" type="HBoxContainer" parent="Container"]
 layout_mode = 2
@@ -105,6 +119,22 @@ custom_minimum_size = Vector2(44, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1.00"
+horizontal_alignment = 2
+
+[node name="SphereSpeed" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Container/SphereSpeed"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sphere speed"
+
+[node name="Value" type="Label" parent="Container/SphereSpeed"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0.00"
 horizontal_alignment = 2
 
 [connection signal="value_changed" from="Container/RainSize/HSlider" to="." method="_on_rain_size_changed"]

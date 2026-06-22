@@ -13,6 +13,15 @@ shader = ExtResource("1_rujqj")
 shader_parameter/albedo = Color(5.19812e-06, 0.748295, 0.942472, 1)
 shader_parameter/metalic = 1.0
 shader_parameter/roughness = 0.0
+shader_parameter/specular = 0.5
+shader_parameter/reflection_tint = Color(0.55, 0.85, 1, 1)
+shader_parameter/reflection_strength = 0.35
+shader_parameter/reflection_distortion = 0.018
+shader_parameter/mouse_reflection_enabled = false
+shader_parameter/mouse_reflection_position = Vector2(0, 0)
+shader_parameter/mouse_reflection_color = Color(0.45, 0.95, 1, 1)
+shader_parameter/mouse_reflection_radius = 0.22
+shader_parameter/mouse_reflection_intensity = 1.0
 shader_parameter/effect_texture_size = null
 shader_parameter/effect_texture = SubResource("Texture2DRD_gbeoi")
 
@@ -35,6 +44,7 @@ sky = SubResource("Sky_ng08w")
 [node name="WaterPlane" type="Area3D"]
 script = ExtResource("1_ltm8k")
 damping = 2.0
+reflection_preset = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("ShaderMaterial_qy6ln")
